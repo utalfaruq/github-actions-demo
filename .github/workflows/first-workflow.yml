@@ -1,0 +1,13 @@
+name: My First GitHub Action
+
+on: push # Runs this workflow when you push code
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest # Use Ubuntu as the OS
+    steps:
+      -  name: Checkout Repository
+         uses: actions/checkout@v3  # Get the code from your repo
+
+      -  name: Print a Hello Message
+         run: echo "Hello, GitHub Actions!"
